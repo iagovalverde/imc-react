@@ -1,0 +1,36 @@
+table {
+    margin: 24px auto;
+    padding: 12px;
+    width: 100%;
+    background-color: rgb(245, 242, 242);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+table, th, td {
+    border: 1px solid #ccc;
+    
+}
+
+th {
+    padding: 16px;
+    background-color: cornflowerblue;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+td {
+    padding: 12px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #ededed;
+}
+
+table tr:nth-child(even) {
+    background-color: #e4e4e4;
+}
+
+.rowClass {
+    background-color: #a2cffe;
+}

@@ -1,11 +1,12 @@
-import ImcCalc from "./components/ImcCalc"
+import Formulario from "./components/Formulario"
+import Tabela from "./components/Tabela"
 
 function App() {
 
-  
   return (
     <>
-      <ImcCalc />
+      <Formulario />
+      <Tabela />
     </>
   )
 }
