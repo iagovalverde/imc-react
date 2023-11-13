@@ -8,18 +8,16 @@ const Formulario = () => {
     const [imc, setImc] = useState(0);
 
     useEffect(() => {
-        const calcIMC = weight / (height * height);
-        setImc(calcIMC.toFixed(2));
+        const calcImc = weight / (height * height);
+        setImc(calcImc.toFixed(2));
     }, [weight, height])
 
     return (
         <div className="container">
-            <Tabela valorImc={imc} />
             <h1>Calcule seu IMC</h1>
             <form className={styles.form}>
                 <label htmlFor="height">Altura(m):</label>
                 <input id="height" onChange={({ target }) => setHeight(parseFloat(target.value))} type="number" placeholder="Digite sua altura" />
-
                 <label htmlFor="weight">Peso(kg):</label>
                 <input id="weight" onChange={({ target }) => setWeight(parseFloat(target.value))} type="number" placeholder="Digite seu peso (kg)" />
             </form>
