@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react"
-import Tabela from '../Tabela'
 import styles from './Formulario.module.css'
 
-const Formulario = () => {
+const Formulario = ({valorImc, setValorImc}) => {
     const [weight, setWeight] = useState(0);
     const [height, setHeight] = useState(0);
-    const [imc, setImc] = useState(0);
 
     useEffect(() => {
         const calcImc = weight / (height * height);
-        setImc(calcImc.toFixed(2));
+        setValorImc(calcImc.toFixed(2));
     }, [weight, height])
 
     return (
@@ -21,7 +19,7 @@ const Formulario = () => {
                 <label htmlFor="weight">Peso(kg):</label>
                 <input id="weight" onChange={({ target }) => setWeight(parseFloat(target.value))} type="number" placeholder="Digite seu peso (kg)" />
             </form>
-            <p>Seu IMC é: {imc}</p>
+            <p>Seu IMC é: {valorImc}</p>
         </div>
     )
 }
